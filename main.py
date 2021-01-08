@@ -2,6 +2,8 @@ from PIL import Image
 import os
 import glob
 
+saveToPath = "C:\\Users\\phili\\Desktop\\"
+
 filePath = input("File: ")
 filePath = filePath[1:-1]
 
@@ -25,4 +27,4 @@ print("New size is " + "(" + str(newSize[0]) + ", " + str(newSize[1]) + ")")
 
 newImage = image.resize((newSize[0], newSize[1]), Image.ANTIALIAS)
 
-newImage.save("C:\\Users\\phili\\Desktop\\" + "Downscaled_" + fileName, optimize=True, quality=95)
+newImage.save(saveToPath + "Downscaled_" + fileName, optimize=True, quality=95)
